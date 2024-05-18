@@ -1,4 +1,4 @@
-package net.astrubale.mixin;
+package net.astrubale.testmod.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
