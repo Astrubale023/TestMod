@@ -1,0 +1,6 @@
+This branch contain a clean project for a fabric mod.
+You just need to change the name of the mod so: the name of the 3 classes(TestMod, TestModClient and TestModDataGeneration),
+also you have to change the mod ID, the directory of "src/main/java/net/astrubale/testMod".
+After this you have to change the path in the json files and somenthing in gradle files too(maybe).
+
+You can choose to do this weather download a new zip fabric loader from their site: https://fabricmc.net/develop/template/;
