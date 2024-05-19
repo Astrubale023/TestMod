@@ -1,5 +1,7 @@
 package net.astrubale.testmod;
 
+import net.astrubale.testmod.block.ModBlocks;
+import net.astrubale.testmod.item.ModItemGroups;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,7 +13,8 @@ public class TestMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
 
-		LOGGER.info("Hello Fabric world!");
+		ModBlocks.registerModBlocks();
 	}
 }

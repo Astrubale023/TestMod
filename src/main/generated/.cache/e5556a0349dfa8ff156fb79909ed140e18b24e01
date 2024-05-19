@@ -1,0 +1,7 @@
+// 1.20.4	2024-05-19T10:06:27.6215076	Test Mod/Block Loot Tables
+132d67f3ade46c6f559f45c581437ca92ef1f1e5 data\testmod\loot_tables\blocks\stripped_chestnut_wood.json
+05fdcaa6cdc92bdd15b443c9c8547d888a9fff47 data\testmod\loot_tables\blocks\chestnut_wood.json
+bbe5ffbb871ea33820fa2d529293c457a2573a1b data\testmod\loot_tables\blocks\chestnut_log.json
+5026dc94986f3ee05ee32fad251af1de27158007 data\testmod\loot_tables\blocks\chestnut_planks.json
+95fdd77d393568658953773e11d99bd98141d63c data\testmod\loot_tables\blocks\chestnut_leaves.json
+041369b9cbe7997ee70503ec57a9e263ed390aa5 data\testmod\loot_tables\blocks\stripped_chestnut_log.json
