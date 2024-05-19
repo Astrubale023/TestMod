@@ -1,0 +1,46 @@
+package net.astrubale.testmod.datagen;
+
+import net.astrubale.testmod.block.ModBlocks;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.server.loottable.BlockLootTableGenerator;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.Item;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
+import net.minecraft.loot.function.ApplyBonusLootFunction;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+
+public class ModLootTableProvider extends FabricBlockLootTableProvider {
+    public ModLootTableProvider(FabricDataOutput dataOutput) {
+        super(dataOutput);
+    }
+
+    @Override
+    public void generate() {
+
+        addDrop(ModBlocks.CHESTNUT_LOG);
+        addDrop(ModBlocks.CHESTNUT_WOOD);
+        addDrop(ModBlocks.STRIPPED_CHESTNUT_LOG);
+        addDrop(ModBlocks.STRIPPED_CHESTNUT_WOOD);
+        addDrop(ModBlocks.CHESTNUT_PLANKS);
+
+        //cahnge the sapling
+        addDrop(ModBlocks.CHESTNUT_LEAVES, leavesDrops(ModBlocks.CHESTNUT_LEAVES, Blocks.SPRUCE_SAPLING, 0.0025f)); // TODO
+    }
+
+    public LootTable.Builder copperLikeOreDrops(Block drop, Item item) {
+        return BlockLootTableGenerator.dropsWithSilkTouch(drop, (LootPoolEntry.Builder)this.applyExplosionDecay(drop,
+                ((LeafEntry.Builder)
+                        ItemEntry.builder(item)
+                                .apply(SetCountLootFunction
+                                        .builder(UniformLootNumberProvider
+                                                .create(2.0f, 5.0f))))
+                        .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))));
+    }
+}
