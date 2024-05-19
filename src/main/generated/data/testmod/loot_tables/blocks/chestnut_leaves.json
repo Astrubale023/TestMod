@@ -53,7 +53,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "minecraft:spruce_sapling"
+              "name": "testmod:chestnut_sapling"
             }
           ]
         }
