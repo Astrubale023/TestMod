@@ -12,9 +12,9 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final ItemGroup RUBY_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(TestMod.MOD_ID, "ruby"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ruby"))
+    public static final ItemGroup WOODDERS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(TestMod.MOD_ID, "woodders"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.woodders"))
                     .icon(() -> new ItemStack(ModBlocks.CHESTNUT_WOOD.asItem())).entries((displayContext, entries) -> {
 
                         entries.add(ModBlocks.CHESTNUT_LOG);
