@@ -15,7 +15,7 @@ public class ModItemGroups {
     public static final ItemGroup WOODDERS_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(TestMod.MOD_ID, "woodders"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.woodders"))
-                    .icon(() -> new ItemStack(ModBlocks.CHESTNUT_WOOD.asItem())).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModBlocks.CHESTNUT_LOG.asItem())).entries((displayContext, entries) -> {
 
                         entries.add(ModBlocks.CHESTNUT_LOG);
                         entries.add(ModBlocks.CHESTNUT_WOOD);
