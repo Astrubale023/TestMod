@@ -22,18 +22,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CHESTNUT_PLANKS.asItem(), 4)
                 .pattern("L")
-                .pattern("")
-                .pattern("")
                 .input('L', ModBlocks.CHESTNUT_LOG)
                 .criterion(hasItem(ModBlocks.CHESTNUT_LOG.asItem()), conditionsFromItem(ModBlocks.CHESTNUT_LOG.asItem()))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CHESTNUT_PLANKS.asItem())));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CHESTNUT_PLANKS.asItem(), 4)
                 .pattern("L")
-                .pattern("")
-                .pattern("")
                 .input('L', ModBlocks.STRIPPED_CHESTNUT_LOG)
                 .criterion(hasItem(ModBlocks.STRIPPED_CHESTNUT_LOG.asItem()), conditionsFromItem(ModBlocks.STRIPPED_CHESTNUT_LOG.asItem()))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CHESTNUT_PLANKS.asItem())));
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.STRIPPED_CHESTNUT_LOG.asItem())));
     }
 }

@@ -1,9 +1,6 @@
 package net.astrubale.testmod;
 
-import net.astrubale.testmod.datagen.ModBlockTagProvider;
-import net.astrubale.testmod.datagen.ModItemTagProvider;
-import net.astrubale.testmod.datagen.ModLootTableProvider;
-import net.astrubale.testmod.datagen.ModModelProvider;
+import net.astrubale.testmod.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -16,5 +13,6 @@ public class TestModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModRecipeProvider::new);
 	}
 }
