@@ -1,7 +1,9 @@
 package net.astrubale.testmod;
 
 import net.astrubale.testmod.block.ModBlocks;
+import net.astrubale.testmod.datagen.ModWorldGenerator;
 import net.astrubale.testmod.item.ModItemGroups;
+import net.astrubale.testmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -29,5 +31,7 @@ public class TestMod implements ModInitializer {
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHESTNUT_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CHESTNUT_LEAVES, 30, 60);
+
+		ModWorldGeneration.generateModWorldGen();
 	}
 }
