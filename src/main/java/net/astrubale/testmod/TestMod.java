@@ -1,5 +1,6 @@
 package net.astrubale.testmod;
 
+import net.astrubale.testmod.networking.ModMessages;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +12,8 @@ public class TestMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		ModMessages.registerC2SPackets();
 
 		LOGGER.info("Hello Fabric world!");
 	}
