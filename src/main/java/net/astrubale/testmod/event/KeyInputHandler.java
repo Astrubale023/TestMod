@@ -1,9 +1,13 @@
 package net.astrubale.testmod.event;
 
+import net.astrubale.testmod.networking.ModMessages;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.text.Text;
 import net.minecraft.text.Texts;
 import org.lwjgl.glfw.GLFW;
@@ -18,7 +22,7 @@ public class KeyInputHandler {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if(drinkingKey.wasPressed()) {
                 // This happens when our custom key is pressed
-                client.player.sendMessage(Text.literal("Hello, I pressed a Key!"));
+                ClientPlayNetworking.send(ModMessages.DRINKING_ID, PacketByteBufs.create());
             }
         });
     }

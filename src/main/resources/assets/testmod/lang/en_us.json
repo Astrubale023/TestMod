@@ -1,4 +1,7 @@
 {
   "key.category.testmod.test": "Tutorial Mod Keys",
-  "key.testmod.drink_water": "Drink Water Key"
+  "key.testmod.drink_water": "Drink Water Key",
+
+  "message.testmod.drank_water": "Drank Water!",
+  "message.testmod.no_water": "No Water around!"
 }
