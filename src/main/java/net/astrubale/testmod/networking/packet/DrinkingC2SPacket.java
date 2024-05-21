@@ -1,5 +1,7 @@
 package net.astrubale.testmod.networking.packet;
 
+import net.astrubale.testmod.util.IEntityDataSaver;
+import net.astrubale.testmod.util.ThirstData;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.Blocks;
@@ -31,13 +33,22 @@ public class DrinkingC2SPacket {
             world.playSound(null, player.getBlockPos(), SoundEvents.ENTITY_GENERIC_DRINK, SoundCategory.PLAYERS,
                     0.5f, world.random.nextFloat() * 0.1f + 0.9f);
 
-            // Output how much thirst player has
             // actually add the water level to the player
+            ThirstData.addThirst(((IEntityDataSaver)player), 1);
+            // Output how much thirst player has
+            player.sendMessage(Text.literal("Thirst: "+ ((IEntityDataSaver) player).getPersistentData().getInt("thirst"))
+                    .fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), true);
         }
         else {
             // Notify the player
             player.sendMessage(Text.translatable(MESSAGE_NO_WATER_NEARBY)
                     .fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
+
+            // Output how much thirst player has
+            player.sendMessage(Text.literal("Thirst: "+ ((IEntityDataSaver) player).getPersistentData().getInt("thirst"))
+                    .fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), true);
+
+            // Sync thirst
         }
     }
 
