@@ -49,6 +49,7 @@ public class DrinkingC2SPacket {
                     .fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), true);
 
             // Sync thirst
+            ThirstData.syncThirst(((IEntityDataSaver) player).getPersistentData().getInt("thirst"), player);
         }
     }
 

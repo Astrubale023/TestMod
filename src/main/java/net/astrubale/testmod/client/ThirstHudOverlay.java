@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.GameRenderer;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 public class ThirstHudOverlay implements HudRenderCallback {
@@ -39,6 +38,7 @@ public class ThirstHudOverlay implements HudRenderCallback {
         }
 
         RenderSystem.setShaderTexture(0, FILLED_THIRST);
+
         for(int i = 0; i < 10; i++) {
             if(((IEntityDataSaver) MinecraftClient.getInstance().player).getPersistentData().getInt("thirst") > i) {
                 drawContext.drawTexture(FILLED_THIRST,x - 94 + (i * 9),y - 54,0,0,12,12,

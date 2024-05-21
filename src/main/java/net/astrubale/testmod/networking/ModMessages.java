@@ -2,6 +2,8 @@ package net.astrubale.testmod.networking;
 
 import net.astrubale.testmod.TestMod;
 import net.astrubale.testmod.networking.packet.DrinkingC2SPacket;
+import net.astrubale.testmod.networking.packet.ThirstSyncDataS2CPacket;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.util.Identifier;
 
@@ -14,6 +16,6 @@ public class ModMessages {
     }
 
     public static void registerS2CPackets() {
-
+        ClientPlayNetworking.registerGlobalReceiver(THIRST_SYNC_ID, ThirstSyncDataS2CPacket::receive);
     }
 }
