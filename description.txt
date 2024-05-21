@@ -1,2 +1,3 @@
 This branch replicate this playlist: https://www.youtube.com/watch?v=wqPyFvvrIMQ&list=PLKGarocXCE1GpU_mSYt_2G3aePZVgB3pK&pp=iAQB
 Which add a "thirst system" to minecraft
+Disclaimer: this system is far from perfect and is just a project that could give you a base knowledgement about: Keybinds, Networking, Saving data on the player and HUD
