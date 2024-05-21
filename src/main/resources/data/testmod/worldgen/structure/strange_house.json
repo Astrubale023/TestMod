@@ -44,8 +44,8 @@
 
   // What mobs can spawn over time in the structure.
   // Make sure you add the mob to the right category (monster, creature, etc)
-  /*
   "spawn_overrides": {
+    /*
     "monster": {
       "bounding_box": "full", // Use the bounding box of entire structure instead of individual pieces.
       "spawns": [
@@ -63,6 +63,7 @@
         }
       ]
     },
+    */
     "creature": {
       "bounding_box": "piece",
       "spawns": [
@@ -75,7 +76,6 @@
       ]
     }
   },
-  */
 
   // Optional thing that allows swapping a template pool with another per structure json instance. More of an expert niche thing.
   "pool_aliases": []
